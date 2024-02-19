@@ -44,9 +44,6 @@ var rootCmd = &cobra.Command{
 		}
 
 		for _, port := range c.Ports {
-			fmt.Println(c.Host)
-			fmt.Println(port)
-
 			server := server.NewServer(c.Host, port)
 			go server.Run()
 		}
